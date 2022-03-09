@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="text" id="dauvao">
+<select name="" id="sonvu1">
+    <option value="a">VND</option>
+    <option value="b">USD</option>
+</select>
+<select name="" id="sonvu2">
+    <option value="a">VND</option>
+    <option value="b">USD</option>
+</select>
+<button onclick="chuyendoitiente()">convert</button>
+<script>
+function chuyendoitiente() {
+    let giatrivao =document.getElementById("dauvao").value;
+    let sonvu1=document.getElementById('sonvu1').value
+    let sonvu2=document.getElementById('sonvu2').value
+    if (sonvu1 == sonvu2 ){
+        alert(giatrivao);
+    }
+    if(sonvu1=="a" && sonvu2=="b") {
+        alert(giatrivao/24000);
+    }
+    if(sonvu2=="a" && sonvu1=="b") {
+        alert(giatrivao*24000);
+    }
+}
+</script>
+
+</body>
+</html>
